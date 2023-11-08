@@ -1,2 +1,142 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<main class="my-profile">
+  <header class="nav-container" id="home">
+    <nav class="navbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Aloysiushon.pdf" class="nav-link" download="Aloysiushon.pdf">Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container first-name">
+    <div class="aloysius">
+      <h2>AL</h2>
+      <div class="eyewhite">
+        <h3 class="pupils"></h3>
+      </div>
+      <h2>YSIUS</h2>
+    </div>
+  </section>
+      <div class="my-title">
+        <span data-controller="typed-js"></span>
+      </div>
+  <section class="container last-name">
+    <div class="hon">
+      <h2>H</h2>
+      <div class="eyewhite">
+        <h3 class="pupils"></h3>
+      </div>
+      <h2>N</h2>
+    </div>
+  </section>
+
+  <section class="about container">
+    <div class="about-header">
+      <h2>AB</h2>
+      <h2>
+        <div class="about-content">
+          <p>
+            Recent graduate with a passion for web development and a commitment to lifelong learning.
+            My journey into the world of coding started with a full-stack bootcamp, and I've been on an exhilarating learning curve ever since.<br>
+            <br>
+            While I may not have industry experience yet, I bring a fresh perspective and a hunger to immerse myself in the web development field.
+            The dynamic and ever-evolving nature of web technologies excites me, and I'm eager to embark on this journey of growth and discovery.<br>
+            <br>
+            Let's bring innovation to life together!
+          </p>
+        </div>
+      </h2>
+      <h2>UT</h2>
+    </div>
+  </section>
+
+   <section class="portfolio container">
+    <h2>PORTF</h2>
+    <h2></h2>
+    <h2>LIO</h2>
+    <div class="portfolio-items">
+      <article class="portfolio-item">
+        <div class="portfolio-img"><%= image_tag('', alt: 'Dogfrens') %></div>
+        <h3>DogFrens</h3>
+        <div class="portfolio-link">
+          <a href="https://dogfrens-a99bf1c2bbab.herokuapp.com" class="btn web-link" target="_blank">Demo</a>
+          <a href="https://github.com/aloysiushon/Dogfrens-clone" class="btn git-link" target="_blank">Github</a>
+        </div>
+      </article>
+      <article class="portfolio-item">
+        <div class="portfolio-img"><%= image_tag('', alt: 'Dogfrens') %></div>
+        <h3>BodFrens</h3>
+        <div class="portfolio-link">
+          <a href="https://www.bodfrens.com/" class="btn web-link" target="_blank">Demo</a>
+          <a href="https://github.com/aloysiushon/bodfrens-clone" class="btn git-link" target="_blank">Github</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+
+    <section class="skills container">
+      <h3>Skills</h3>
+      <div class="experience-list">
+        <ul class="experience-items">
+          <li class="experience-item">
+            <%= image_tag('', class: '', alt: 'Rails') %>
+            <h4>Ruby On Rails</h4>
+          </li>
+          <li class="experience-item">
+            <%= image_tag('', class: '', alt: 'Ruby') %>
+            <h4>Ruby</h4>
+          </li>
+          <li class="experience-item">
+            <i class="fa-brands fa-square-js fa-2xl" style="color: #c5c6c7;"></i>
+            <h4>JavaScript</h4>
+          </li>
+          <li class="experience-item">
+            <i class="fa-brands fa-css3-alt fa-2xl" style="color: #c5c6c7;"></i>
+            <h4>CSS</h4>
+          </li>
+          <li class="experience-item">
+            <i class="fa-brands fa-html5 fa-2xl" style="color: #c5c6c7;"></i>
+            <h4>HTML 5</h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+
+  <section class="contact-container" id="contact">
+    <h3>Contact</h3>
+    <div class="my-contacts">
+      <div class="my-number">
+        <i class="fa-solid fa-phone fa-2xl" style="color: #c5c6c7;"></i>
+        <div class="text">
+          <h3>Phone:</h3>
+          <h4>+65 92766446</h4>
+        </div>
+      </div>
+      <div class="my-email">
+        <i class="fa-solid fa-envelope fa-2xl" style="color: #c5c6c7;"></i>
+        <div class="text">
+         <h3>Email:</h3>
+         <h4>aloysiushon@hotmail.com</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+  </footer>
+</main>

@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+body {
+  background-color: #f8cb74;
+}
+
+.aloysius, .hon {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.aloysius > *, .hon > * {
+  font-size: 12rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eyewhite {
+  background-color: #fff;
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  border-radius: 90px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.pupils {
+  background-color: #000;
+  width:11rem;
+  height: 11rem;
+  border-radius: 50%;
+  position: absolute;
+  margin: 0;
+}
