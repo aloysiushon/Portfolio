@@ -3,12 +3,36 @@ body {
   background-color: #f8cb74;
 }
 
-.aloysius, .hon {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.aloysius{
+  display: flex;
+  justify-content: center;
+}
+
+.my-title {
+  background-color: #000;
+  width: 100%;
+  border-radius: 90px;
+}
+.my-title p {
+  margin: 0 10px 0 10px;
+  font-size: 3rem;
+  color: #f8cb74;
+
+}
+
+.hon {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aloysius > *, .hon > * {
@@ -40,4 +64,21 @@ body {
   border-radius: 50%;
   position: absolute;
   margin: 0;
+}
+
+.about-header, .portfolio-header, .contact-header, .skills-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0;
+}
+
+.about-text, .portfolio-text, .contact-text, .skills-text {
+  font-size: 5rem;
+}
+.circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #000;
 }
