@@ -3,12 +3,6 @@ body {
   background-color: #f8cb74;
 }
 
-
-
-.my-profile {
-  // margin: 0 150px 0 150px;
-}
-
 .introduction {
   display: flex;
   flex-direction: column;
@@ -26,12 +20,25 @@ body {
 .my-title {
   background-color: #000;
   width: 100%;
+  // width: clamp(360px, 100%, 1150px);
+  width: clamp(10rem, 80vw, 90rem);
   border-radius: 90px;
+  overflow: hidden;
 }
+
 .my-title p {
   margin: 0 10px 0 10px;
-  font-size: 3rem;
+  font-size: clamp(1rem, 8vw, 3rem);
+  width: 100%;
+  white-space: nowrap;
+  // font-size: 3rem;
   color: #f8cb74;
+}
+
+.last-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hon {
@@ -42,19 +49,25 @@ body {
   align-items: center;
 }
 
-.aloysius > *, .hon > * {
-  font-size: 12rem;
+.aloysius > h2, .hon > h2 {
+  font-size: clamp(0.5rem, 18vw, 13rem);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+}
+
+.eye-container {
+  width: 100%;
+  height: auto;
 }
 
 .eyewhite {
   background-color: #fff;
-  width: 100%;
-  height: 10rem;
+  width: clamp(10rem, 60vw, 50rem); /* Responsive width */
+  height: clamp(2rem, 25vh, 10rem); /* Responsive height */
   position: relative;
   border-radius: 90px;
   overflow: hidden;
@@ -66,8 +79,8 @@ body {
 
 .pupils {
   background-color: #000;
-  width:11rem;
-  height: 11rem;
+  width: clamp(1rem, 40vw, 11rem); /* Responsive width */
+  height: clamp(1rem, 100vh, 11rem); /* Responsive height */
   border-radius: 50%;
   position: absolute;
   margin: 0;
@@ -96,7 +109,7 @@ body {
 }
 
 .about-text, .portfolio-text, .contact-text, .skills-text {
-  font-size: 5rem;
+  font-size: clamp(1rem, 10vw, 5rem);
   margin: 0;
 }
 
@@ -107,6 +120,93 @@ body {
   background-color: #000;
 }
 
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+
+}
+.social-media img {
+  width: 2rem;
+  height: auto;
+  margin: 20px;
+}
+
 .footer-text {
   text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .eyewhite {
+    height: 8rem;
+  }
+
+  .pupils {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width:768px) {
+  .introduction {
+    height: auto;
+    margin-top: 80px;
+  }
+  .last-name{
+    margin-bottom: 60px;
+  }
+  .eyewhite {
+    height: 5rem;
+  }
+
+  .pupils {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .my-title p {
+    font-size: 2rem;
+  }
+
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+  .about-header, .portfolio-header, .contact-header, .skills-header {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .introduction {
+    height: auto;
+    margin-top: 80px;
+  }
+
+  .last-name{
+    margin-bottom: 60px;
+  }
+
+  .eyewhite {
+    height: 4rem;
+  }
+
+  .pupils {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .my-title p {
+    font-size: 2rem;
+  }
+
+  .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .about-header, .portfolio-header, .contact-header, .skills-header {
+    padding-bottom: 0;
+  }
 }

@@ -1,4 +1,4 @@
-<main class=" container my-profile">
+<main class="my-profile">
   <%# <header class="nav-container" id="home">
     <nav class="navbar">
       <ul class="nav">
@@ -33,8 +33,10 @@
     <section class="container last-name">
       <div class="hon">
         <h2>H</h2>
-        <div class="eyewhite">
-          <h3 class="pupils"></h3>
+        <div class="eye-container">
+          <div class="eyewhite">
+            <div class="pupils"></div>
+          </div>
         </div>
         <h2>N</h2>
       </div>
@@ -81,7 +83,14 @@
     </div>
   </section>
   <footer class="container">
+    <div class="social-media container">
+      <%= link_to 'https://www.google.com.sg/', target: '_blank' do %>
+        <%= image_tag('github.svg', alt: 'Github Icon')  %>
+      <% end %>
+      <%= link_to 'https://www.google.com.sg/', target: '_blank' do %>
+        <%= image_tag('linkedin.svg', alt: 'Linkedin Icon') %>
+      <% end %>
+    </div>
     <p class="footer-text">© Aloysius Hon 2023</p>
-
   </footer>
 </main>
