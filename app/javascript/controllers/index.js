@@ -6,3 +6,20 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+console.log('hello');
+document.querySelector('.about-header').addEventListener("click", function(){
+  var circle = document.querySelector(".about .circle");
+  var styles = {
+    width: '30rem',
+    height: '30rem',
+    display: 'flex',
+    justifyContent: 'center',
+  };
+  Object.assign(circle.style, styles);
+
+  var unhide = document.querySelector('.about-content');
+  unhide.style.visibility='visible';
+
+  Object.assign(this.style, unhide);
+});
