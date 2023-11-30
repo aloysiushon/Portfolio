@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 body {
   background-color: #f8cb74;
+  margin: 0 30px 0 30px;
 }
 
 .introduction {
@@ -50,7 +51,7 @@ body {
 }
 
 .aloysius > h2, .hon > h2 {
-  font-size: clamp(0.5rem, 18vw, 13rem);
+  font-size: clamp(0.5rem, 14vw, 13rem);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   display: flex;
@@ -118,6 +119,15 @@ body {
   height: 5rem;
   border-radius: 50%;
   background-color: #000;
+  margin: 0;
+}
+
+.resizeCircle {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 .about-content {
@@ -125,9 +135,14 @@ body {
   width: 60%;
   display: flex;
   align-items: center;
-  text-align: justify;
+  text-align: center;
   color: #fff;
-  visibility: hidden;
+  margin: 0;
+  // transition: opacity 0.5s ease;
+}
+
+.hidden {
+  display: none;
 }
 
 .social-media {
@@ -182,14 +197,29 @@ body {
   .circle {
     width: 3rem;
     height: 3rem;
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+
+  .resizeCircle {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-content {
+    font-size: 0.45rem;
   }
   .about-header, .portfolio-header, .contact-header, .skills-header {
-    padding-bottom: 0;
+    padding: 0;
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 600px) {
   .introduction {
+    margin: 0;
     height: auto;
     margin-top: 80px;
   }
@@ -214,9 +244,23 @@ body {
   .circle {
     width: 2.5rem;
     height: 2.5rem;
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  .resizeCircle {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-content {
+    font-size: 0.45rem;
   }
 
   .about-header, .portfolio-header, .contact-header, .skills-header {
-    padding-bottom: 0;
+    padding: 0;
+    margin-top: 30px;
   }
 }

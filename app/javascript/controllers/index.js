@@ -10,16 +10,8 @@ application.register("hello", HelloController)
 console.log('hello');
 document.querySelector('.about-header').addEventListener("click", function(){
   var circle = document.querySelector(".about .circle");
-  var styles = {
-    width: '30rem',
-    height: '30rem',
-    display: 'flex',
-    justifyContent: 'center',
-  };
-  Object.assign(circle.style, styles);
+  circle.classList.toggle('resizeCircle');
 
   var unhide = document.querySelector('.about-content');
-  unhide.style.visibility='visible';
-
-  Object.assign(this.style, unhide);
+  unhide.classList.toggle('hidden');
 });
