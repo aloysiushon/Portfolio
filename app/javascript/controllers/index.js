@@ -40,11 +40,15 @@ document.querySelector('.contact-header').addEventListener("click", function () 
   unhide.classList.toggle('hidden');
 
   document.getElementById('sendEmail').addEventListener('click', function () {
+    event.preventDefault();
     var email = document.getElementById('exampleFormControlInput1').value;
     var message = document.getElementById('exampleFormControlTextarea1').value;
 
     var mailtoLink = 'mailto:aloysiushon@hotmail.com?subject=Email Subject&body=Email Address: ' + encodeURIComponent(email) + '%0A%0AMessage: ' + encodeURIComponent(message);
 
     window.location.href = mailtoLink;
+
+    var form= document.querySelector('form');
+    form.reset();
   })
 })
