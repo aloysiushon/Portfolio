@@ -15,3 +15,36 @@ document.querySelector('.about-header').addEventListener("click", function(){
   var unhide = document.querySelector('.about-content');
   unhide.classList.toggle('hidden');
 });
+
+document.querySelector('.portfolio-header').addEventListener("click", function () {
+  var unhide = document.querySelector('.portfolio-projects');
+  unhide.classList.toggle('hidden');
+})
+
+var eyeBall = document.querySelector('.pupils');
+document.onmousemove = function () {
+  var x = event.clientX * 100 / window.innerWidth + "%";
+  var y = event.clientY * 100 / window.innerHeight + "%";
+
+  eyeBall.style.left = x;
+  eyeBall.style.top = y;
+}
+
+document.querySelector('.skills').addEventListener("click", function () {
+  var unhide = document.querySelector('.skills-logos');
+  unhide.classList.toggle('hidden');
+})
+
+document.querySelector('.contact-header').addEventListener("click", function () {
+  var unhide = document.querySelector('.email.container');
+  unhide.classList.toggle('hidden');
+
+  document.getElementById('sendEmail').addEventListener('click', function () {
+    var email = document.getElementById('exampleFormControlInput1').value;
+    var message = document.getElementById('exampleFormControlTextarea1').value;
+
+    var mailtoLink = 'mailto:aloysiushon@hotmail.com?subject=Email Subject&body=Email Address: ' + encodeURIComponent(email) + '%0A%0AMessage: ' + encodeURIComponent(message);
+
+    window.location.href = mailtoLink;
+  })
+})

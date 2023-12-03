@@ -85,6 +85,8 @@ body {
   border-radius: 50%;
   position: absolute;
   margin: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 100ms ease-out;
 }
 
 .about-header, .portfolio-header, .contact-header, .skills-header {
@@ -142,7 +144,77 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.skills-header {
+display: flex;
+flex-direction: column;
+}
+
+.skills-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.skills-logos img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.skills-logos li {
+  list-style: none;
+}
+
+.portfolio-projects {
+  padding-bottom: 35px;
+}
+
+.portfolio-projects .row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.project-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.email.container {
+  width: 60%;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-input, .message-input {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-color: #000;
+  border-radius: 50px;
+}
+
+.email a {
+  background-color: #000;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.btn-custom {
+  width: 8rem;
+  align-self: center;
+}
+
+.btn-custom:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .social-media {
@@ -150,8 +222,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 0 20px 0;
-
 }
+
 .social-media img {
   width: 2rem;
   height: auto;
@@ -215,6 +287,20 @@ body {
     padding: 0;
     margin-top: 30px;
   }
+
+  .skills-logos {
+    padding: 0;
+  }
+
+  .skills-logos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-logos img {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -262,5 +348,21 @@ body {
   .about-header, .portfolio-header, .contact-header, .skills-header {
     padding: 0;
     margin-top: 30px;
+  }
+
+  .skills-logos {
+    padding: 0;
+  }
+
+  .skills-logos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-logos img {
+    // width: 2rem;
+    // height: 2rem;
+    margin-right: 0;
   }
 }
